@@ -201,25 +201,6 @@ var upperCaseArr = [
 
 
 
-  
-
-  //  var copyBtn = document.getElementById("copy");
-  // copyBtn.addEventListener("click",() =>{
-  //   var textera = document.createElement("textarea");
-  //   var password = generatePassword.innerText;
-    
-  //   if(!password){
-  //     return;
-  //   }
-  //   textera.value = password;
-  //   document.body.appendChild(textera);
-  //   textera.select();
-  //   document.execCommand("copy");
-  //   textera.remove();
-  //   alert("password copied to clipboard!")
-  // } );
-
-  // console.log(copyBtn);
 
   
 
