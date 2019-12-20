@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
-    <!-- boostrap css link -->
+    <!-- webdite icon -->
+    <link rel="icon" type="image/png" href="Assets\applications.png">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- boostrap JS link -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -20,52 +21,60 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <!-- google font link -->
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Fonts links -->
+    <link href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
-       
-    <div class="container rounded">
-        <h1>Password Generator</h1>
-        <div class="result-container rounded">
-            <span id="result"></span>
-            <button class="btn btn btn-dark" id="clipboard">
-                Copy
-                
-            </button>
+    <div class="wrapper">
+        <div>
+            <header>
+                <h1>Password Generator</h1>
+            </header>
         </div>
-        <div class="container rounded">
-            <div class="setting">
-                <label>Password length</label>
-                <input type="number" id="length" min='8' max='128' placeholder='8' />
+
+
+        <div class="container-sm rounded">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Generate a Password</h4>
+                </div>
             </div>
-            <div class="setting ">
-                <label>Uppercase letters</label>
-                <input class="" type="checkbox" id="uppercase" checked />
+
+            <div class="form-row justify-content-center">
+
+                <div class="col-sm-10 ">
+                    <textarea class=" form-control " type="text" readonly rows="7"
+                        placeholder="Your Secure Password... " id="textbox" aria-label="Generated Password">
+                            </textarea>
+                </div>
+
             </div>
-            <div class="setting ">
-                <label>Lowercase letters</label>
-                <input class="" type="checkbox" id="lowercase" checked />
+
+            <div class="row" id="space">
+                <!-- this is just a space -->
             </div>
-            <div class="setting ">
-                <label>Numbers</label>
-                <input class="" type="checkbox" id="numbers" checked />
+
+            <div class="row justify-content-center">
+                <div class="col-sm-3">
+                    <button class="btn btn-danger" onclick="" id="generate">Generate Password</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-secondary" onclick="" id="copy">
+                        Copy to Clipboard
+                    </button>
+                </div>
             </div>
-            <div class=" setting">
-                <label>Symbols</label>
-                <input  type="checkbox" id="symbols" checked />
-            </div>
+
+
         </div>
-        <button class="btn btn-large btn btn-dark" id="generate">
-            Generate password
-        </button>
     </div>
 
-
 </body>
-<script src="script.js"></script>
 
 </html>
+<script src="app.js"></script>
