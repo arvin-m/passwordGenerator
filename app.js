@@ -97,6 +97,8 @@ var upperCaseArr = [
     symbol: false,
     number: false
   };
+
+  
   
   function setPassOptions() {
     var lengthInput = prompt(
@@ -134,7 +136,7 @@ var upperCaseArr = [
   
     return randomElement;
   }
-  
+     
   function generatePassword() {
     var options = setPassOptions();
     console.log(options);
@@ -167,21 +169,60 @@ var upperCaseArr = [
       //push the character into my empty userpassword
       userPassword.push(character);
     }
-  
+    // put the passord inside the textarea.
+    document.getElementById("textbox").value = userPassword.join("");
     //turn my userpassword array into a string a return in
     console.log(userPassword);
     console.log(userPassword.join(""));
     return userPassword.join("");
+    
   
-    //
-    //    var possibleCharacter = getRandom(possibleCharacters);
+      }
+
+      var generateBtn = document.querySelector("#generate");
+      generateBtn.addEventListener("click", generatePassword);
   
-    // result.push(possibleCharacter);
+
+
   
-    // console.log(password);
+  
+  // copy text to the clip board
+
+
+  function copyClipboard(){
+    document.getElementById("textbox").select();
+    document.execCommand("copy");
+    alert("password copied to clipboard !");
+
   }
+
+
+
+
+
+
   
-  var generateBtn = document.querySelector("#generate");
-  generateBtn.addEventListener("click", generatePassword);
+
+  //  var copyBtn = document.getElementById("copy");
+  // copyBtn.addEventListener("click",() =>{
+  //   var textera = document.createElement("textarea");
+  //   var password = generatePassword.innerText;
+    
+  //   if(!password){
+  //     return;
+  //   }
+  //   textera.value = password;
+  //   document.body.appendChild(textera);
+  //   textera.select();
+  //   document.execCommand("copy");
+  //   textera.remove();
+  //   alert("password copied to clipboard!")
+  // } );
+
+  // console.log(copyBtn);
+
   
+
   
+ 
+ 
