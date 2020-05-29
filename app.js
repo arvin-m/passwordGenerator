@@ -175,35 +175,14 @@ var upperCaseArr = [
     console.log(userPassword);
     console.log(userPassword.join(""));
     return userPassword.join("");
-    
-  
       }
 
-      var generateBtn = document.querySelector("#generate");
-      generateBtn.addEventListener("click", generatePassword);
-  
-
-
-  
-  
+    var generateBtn = document.querySelector("#generate");
+    generateBtn.addEventListener("click", generatePassword);
   // copy text to the clip board
-
-
   function copyClipboard(){
     document.getElementById("textbox").select();
     document.execCommand("copy");
     alert("password copied to clipboard !");
 
   }
-
-
-
-
-
-
-
-  
-
-  
- 
- 
